@@ -1,0 +1,137 @@
+{
+  "MOB_KEEPER_EARTHDAUGHTER_VETERAN_BOSS": {
+    "display_name": "Earth Daughter Veteran",
+    "type": "👑 BOSS",
+    "health": 8500,
+    "damage": 450,
+    "tier": 6,
+    "threat_level": "Very High",
+    "faction": "Keeper"
+  },
+  "MOB_KEEPER_EARTHDAUGHTER_BOSS": {
+    "display_name": "Earth Daughter",
+    "type": "👑 BOSS",
+    "health": 6500,
+    "damage": 350,
+    "tier": 5,
+    "threat_level": "High",
+    "faction": "Keeper"
+  },
+  "MOB_KEEPER_ROCKSPIRIT_VETERAN": {
+    "display_name": "Rock Spirit Veteran",
+    "type": "⭐ ELITE",
+    "health": 4200,
+    "damage": 280,
+    "tier": 5,
+    "threat_level": "High",
+    "faction": "Keeper"
+  },
+  "MOB_KEEPER_THORNWEAVER_BOSS": {
+    "display_name": "Thorn Weaver",
+    "type": "👑 BOSS",
+    "health": 7200,
+    "damage": 380,
+    "tier": 6,
+    "threat_level": "Very High",
+    "faction": "Keeper"
+  },
+  "KEEPER_SOLO_CHEST_STANDARD": {
+    "display_name": "Keeper Guardian",
+    "type": "🛡️ KEEPER",
+    "health": 2800,
+    "damage": 180,
+    "tier": 3,
+    "threat_level": "Medium",
+    "faction": "Keeper"
+  },
+  "KEEPER_SOLO_CHEST_RARE": {
+    "display_name": "Rare Keeper Guardian",
+    "type": "🛡️ KEEPER",
+    "health": 3500,
+    "damage": 220,
+    "tier": 4,
+    "threat_level": "Medium-High",
+    "faction": "Keeper"
+  },
+  "MOB_AVALONIAN_KNIGHT_ELITE": {
+    "display_name": "Avalonian Elite Knight",
+    "type": "⭐ ELITE",
+    "health": 5200,
+    "damage": 320,
+    "tier": 6,
+    "threat_level": "High",
+    "faction": "Avalonian"
+  },
+  "MOB_AVALONIAN_ACOLYTE": {
+    "display_name": "Avalonian Acolyte",
+    "type": "⚪ AVALONIAN",
+    "health": 2400,
+    "damage": 160,
+    "tier": 4,
+    "threat_level": "Medium",
+    "faction": "Avalonian"
+  },
+  "MOB_AVALONIAN_KNIGHT_VETERAN": {
+    "display_name": "Avalonian Veteran Knight",
+    "type": "👑 BOSS",
+    "health": 9200,
+    "damage": 520,
+    "tier": 7,
+    "threat_level": "Very High",
+    "faction": "Avalonian"
+  },
+  "MOB_BANDIT_FIGHTER": {
+    "display_name": "Bandit Fighter",
+    "type": "👹 REGULAR",
+    "health": 1800,
+    "damage": 120,
+    "tier": 3,
+    "threat_level": "Low-Medium",
+    "faction": "Bandit"
+  },
+  "MOB_BANDIT_LEADER_BOSS": {
+    "display_name": "Bandit Leader",
+    "type": "👑 BOSS",
+    "health": 5800,
+    "damage": 310,
+    "tier": 5,
+    "threat_level": "High",
+    "faction": "Bandit"
+  },
+  "MOB_UNDEAD_SKELETON_WARRIOR": {
+    "display_name": "Skeleton Warrior",
+    "type": "👹 REGULAR",
+    "health": 2200,
+    "damage": 140,
+    "tier": 3,
+    "threat_level": "Medium",
+    "faction": "Undead"
+  },
+  "MOB_UNDEAD_LICH_BOSS": {
+    "display_name": "Lich",
+    "type": "👑 BOSS",
+    "health": 8800,
+    "damage": 480,
+    "tier": 7,
+    "threat_level": "Very High",
+    "faction": "Undead"
+  },
+  "CREATURE_FOREST_BEAR_KEEPER": {
+    "display_name": "Forest Bear Keeper",
+    "type": "🛡️ KEEPER",
+    "health": 3200,
+    "damage": 200,
+    "tier": 4,
+    "threat_level": "Medium",
+    "faction": "Nature"
+  },
+  "CREATURE_DIREWOLF_ELITE": {
+    "display_name": "Elite Direwolf",
+    "type": "⭐ ELITE",
+    "health": 2800,
+    "damage": 240,
+    "tier": 4,
+    "threat_level": "Medium-High",
+    "faction": "Nature"
+  }
+}

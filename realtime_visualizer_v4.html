@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Albion Scanner v4.0 - Real-time Visualization</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e0e0e0;
+            overflow: hidden;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 280px 1fr 300px;
+            grid-template-rows: 70px 1fr 40px;
+            grid-template-areas: 
+                "header header header"
+                "sidebar map info"
+                "footer footer footer";
+            height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 3px solid #ffd700;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-shadow: 0 2px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .header h1 {
+            color: #ffd700;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .status-indicator {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .connection-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid;
+        }
+
+        .connection-status.connected {
+            border-color: #00ff00;
+            color: #00ff00;
+        }
+
+        .connection-status.disconnected {
+            border-color: #ff4444;
+            color: #ff4444;
+        }
+
+        .connection-status.connecting {
+            border-color: #ffaa00;
+            color: #ffaa00;
+        }
+
+        .status-light {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .status-light.connected {
+            background: #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        .status-light.disconnected {
+            background: #ff4444;
+            box-shadow: 0 0 10px #ff4444;
+        }
+
+        .status-light.connecting {
+            background: #ffaa00;
+            box-shadow: 0 0 10px #ffaa00;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: rgba(20, 20, 20, 0.95);
+            border-right: 2px solid #4a4a4a;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .map-container {
+            grid-area: map;
+            position: relative;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+            overflow: hidden;
+        }
+
+        .map-canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .info-panel {
+            grid-area: info;
+            background: rgba(20, 20, 20, 0.95);
+            border-left: 2px solid #4a4a4a;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: rgba(0, 0, 0, 0.9);
+            border-top: 2px solid #4a4a4a;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .section {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: rgba(40, 40, 40, 0.8);
+            border-radius: 10px;
+            border-left: 4px solid #ffd700;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .section h3 {
+            color: #ffd700;
+            margin-bottom: 12px;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .entity-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 6px 0;
+            background: rgba(60, 60, 60, 0.5);
+            border-radius: 6px;
+            border-left: 3px solid #555;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .entity-item:hover {
+            background: rgba(80, 80, 80, 0.7);
+            border-left-color: #ffd700;
+            transform: translateX(2px);
+        }
+
+        .entity-item.selected {
+            background: rgba(255, 215, 0, 0.2);
+            border-left-color: #ffd700;
+        }
+
+        .entity-icon {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        .entity-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .entity-name {
+            font-size: 14px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .entity-meta {
+            font-size: 11px;
+            color: #aaa;
+            margin-top: 2px;
+        }
+
+        .entity-distance {
+            font-size: 12px;
+            color: #ffd700;
+            font-weight: bold;
+            min-width: 60px;
+            text-align: right;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .stat-box {
+            background: rgba(30, 30, 30, 0.8);
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #4a4a4a;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .stat-value {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffd700;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #aaa;
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+
+        .controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .control-button {
+            width: 45px;
+            height: 45px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #ffd700;
+            border-radius: 6px;
+            color: #ffd700;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .control-button:hover {
+            background: rgba(255, 215, 0, 0.2);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+            transform: scale(1.05);
+        }
+
+        .floor-indicator {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffd700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .mini-map {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 180px;
+            height: 180px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 12px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 4px 0;
+        }
+
+        .legend-color {
+            width: 14px;
+            height: 14px;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+
+        .entity-mob { border-left-color: #ff4444; }
+        .entity-chest { border-left-color: #44ff44; }
+        .entity-boss { border-left-color: #ff8800; }
+        .entity-shrine { border-left-color: #8844ff; }
+
+        .export-controls {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(40, 40, 40, 0.8);
+            border-radius: 10px;
+            border-left: 4px solid #ffd700;
+        }
+
+        .export-button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            background: linear-gradient(135deg, #ffd700, #ffaa00);
+            border: none;
+            border-radius: 6px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .export-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .notification {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            z-index: 1000;
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid #ffd700;
+            border-radius: 8px;
+            color: #ffd700;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            max-width: 300px;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification.error {
+            border-color: #ff4444;
+            color: #ff4444;
+        }
+
+        .notification.success {
+            border-color: #00ff00;
+            color: #00ff00;
+        }
+
+        .live-indicator {
+            display: inline-block;
+            color: #ff4444;
+            font-weight: bold;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+
+        .entity-count-badge {
+            background: #ffd700;
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+
+        .websocket-info {
+            font-size: 11px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Complete Albion Scanner v4.0</h1>
+            <div class="status-indicator">
+                <div class="connection-status connecting" id="connection-status">
+                    <div class="status-light connecting" id="status-light"></div>
+                    <span id="connection-text">CONNECTING...</span>
+                </div>
+                <div class="websocket-info">
+                    <div>📡 WebSocket: <span id="websocket-url">ws://localhost:8765</span></div>
+                    <div><span class="live-indicator">● LIVE</span> Real-time Updates</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="section">
+                <h3>🎯 Live Entities <span class="entity-count-badge" id="total-entity-count">0</span></h3>
+                <div id="entity-list">
+                    <div style="color: #888; text-align: center; padding: 20px;">
+                        Waiting for scanner data...
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>📊 Session Statistics</h3>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-value" id="mob-count">0</div>
+                        <div class="stat-label">Mobs</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="chest-count">0</div>
+                        <div class="stat-label">Chests</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="boss-count">0</div>
+                        <div class="stat-label">Bosses</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="runtime">00:00</div>
+                        <div class="stat-label">Runtime</div>
+                    </div>
+                </div>
+                
+                <div class="stats-grid" style="margin-top: 15px;">
+                    <div class="stat-box">
+                        <div class="stat-value" id="detection-rate">0.0</div>
+                        <div class="stat-label">Rate/min</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="duplicate-rate">0%</div>
+                        <div class="stat-label">Duplicates</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="opcode-count">0</div>
+                        <div class="stat-label">OpCodes</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="floor-count">0</div>
+                        <div class="stat-label">Floors</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="export-controls">
+                <h3 style="color: #ffd700; margin-bottom: 10px;">📤 Export & Actions</h3>
+                <button class="export-button" onclick="exportJSON()">📄 Export JSON</button>
+                <button class="export-button" onclick="exportCSV()">📊 Export CSV</button>
+                <button class="export-button" onclick="saveMapImage()">🖼️ Save Map</button>
+                <button class="export-button" onclick="requestFullState()">🔄 Refresh Data</button>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <canvas id="map-canvas" class="map-canvas"></canvas>
+            
+            <div class="controls">
+                <button class="control-button" onclick="zoomIn()" title="Zoom In">+</button>
+                <button class="control-button" onclick="zoomOut()" title="Zoom Out">−</button>
+                <button class="control-button" onclick="resetView()" title="Reset View">⌂</button>
+                <button class="control-button" onclick="toggleGrid()" title="Toggle Grid">⊞</button>
+                <button class="control-button" onclick="toggleTrails()" title="Toggle Trails">🔀</button>
+            </div>
+
+            <div class="floor-indicator">
+                <div>Floor <span id="current-floor">0</span></div>
+                <div style="font-size: 12px; margin-top: 5px;">
+                    <span id="dungeon-type">Scanning...</span>
+                </div>
+            </div>
+
+            <div class="mini-map">
+                <canvas id="mini-map-canvas" width="176" height="176"></canvas>
+            </div>
+
+            <div class="legend">
+                <div style="font-weight: bold; margin-bottom: 8px; color: #ffd700;">Legend</div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ff4444;"></div>
+                    <span>Mobs</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #44ff44;"></div>
+                    <span>Chests</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #ff8800;"></div>
+                    <span>Bosses</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #8844ff;"></div>
+                    <span>Shrines</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #00aaff;"></div>
+                    <span>Player</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <div class="section">
+                <h3>🏰 Dungeon Status</h3>
+                <div id="dungeon-info">
+                    <div><strong>Type:</strong> <span id="dungeon-type-detail">Unknown</span></div>
+                    <div><strong>Session:</strong> <span id="session-id">--</span></div>
+                    <div><strong>In Dungeon:</strong> <span id="in-dungeon">No</span></div>
+                    <div><strong>Started:</strong> <span id="session-start">--:--:--</span></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>🚶 Player Position</h3>
+                <div id="player-info">
+                    <div><strong>X:</strong> <span id="player-x">0.0</span></div>
+                    <div><strong>Y:</strong> <span id="player-y">0.0</span></div>
+                    <div><strong>Z:</strong> <span id="player-z">0.0</span></div>
+                    <div style="margin-top: 8px;"><strong>Last Update:</strong> <span id="last-update">--</span></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>🎯 Selected Entity</h3>
+                <div id="selected-entity">
+                    <div style="color: #888;">Click an entity on the map or list for details</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>🏗️ Avalonian Floors</h3>
+                <div id="avalonian-floors">
+                    <div style="color: #888;">No Avalonian dungeon detected</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>📈 Live Performance</h3>
+                <div>
+                    <div><strong>Packets/sec:</strong> <span id="packet-rate">0</span></div>
+                    <div><strong>WebSocket Latency:</strong> <span id="ws-latency">--ms</span></div>
+                    <div><strong>Last Detection:</strong> <span id="last-detection">--</span></div>
+                    <div><strong>Success Rate:</strong> <span id="success-rate">0%</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>Complete Albion Scanner v4.0 | Real-time Visualization | Advanced Analytics</div>
+            <div id="footer-stats">Entities: 0 | Packets: 0 | Uptime: 00:00</div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script>
+        // Enhanced WebSocket Scanner Client
+        class AdvancedScannerClient {
+            constructor() {
+                this.ws = null;
+                this.reconnectInterval = 3000;
+                this.entities = new Map();
+                this.selectedEntity = null;
+                this.connectionAttempts = 0;
+                this.maxReconnectAttempts = 10;
+                this.sessionStartTime = null;
+                this.lastPacketTime = Date.now();
+                this.packetCount = 0;
+                
+                this.connect();
+                this.startPerformanceMonitoring();
+            }
+            
+            connect() {
+                try {
+                    this.ws = new WebSocket('ws://localhost:8765');
+                    
+                    this.ws.onopen = () => {
+                        console.log('🌐 Connected to Complete Scanner v4.0');
+                        this.updateConnectionStatus('connected', 'CONNECTED');
+                        this.connectionAttempts = 0;
+                        this.showNotification('Connected to scanner!', 'success');
+                        
+                        // Request initial state
+                        this.send({type: 'get_state'});
+                    };
+                    
+                    this.ws.onmessage = (event) => {
+                        try {
+                            const data = JSON.parse(event.data);
+                            this.handleScannerData(data);
+                            this.lastPacketTime = Date.now();
+                            this.packetCount++;
+                        } catch (error) {
+                            console.error('Error parsing message:', error);
+                        }
+                    };
+                    
+                    this.ws.onclose = () => {
+                        console.log('🌐 Scanner connection lost');
+                        this.updateConnectionStatus('disconnected', 'DISCONNECTED');
+                        this.scheduleReconnect();
+                    };
+                    
+                    this.ws.onerror = (error) => {
+                        console.error('WebSocket error:', error);
+                        this.updateConnectionStatus('disconnected', 'ERROR');
+                    };
+                    
+                } catch (error) {
+                    console.error('Connection error:', error);
+                    this.scheduleReconnect();
+                }
+            }
+            
+            scheduleReconnect() {
+                if (this.connectionAttempts < this.maxReconnectAttempts) {
+                    this.connectionAttempts++;
+                    this.updateConnectionStatus('connecting', `RECONNECTING... (${this.connectionAttempts}/${this.maxReconnectAttempts})`);
+                    
+                    setTimeout(() => this.connect(), this.reconnectInterval);
+                } else {
+                    this.updateConnectionStatus('disconnected', 'CONNECTION FAILED');
+                    this.showNotification('Failed to connect to scanner. Please check if the scanner is running.', 'error');
+                }
+            }
+            
+            updateConnectionStatus(status, text) {
+                const statusElement = document.getElementById('connection-status');
+                const lightElement = document.getElementById('status-light');
+                const textElement = document.getElementById('connection-text');
+                
+                statusElement.className = `connection-status ${status}`;
+                lightElement.className = `status-light ${status}`;
+                textElement.textContent = text;
+            }
+            
+            send(data) {
+                if (this.ws && this.ws.readyState === WebSocket.OPEN) {
+                    this.ws.send(JSON.stringify(data));
+                }
+            }
+            
+            handleScannerData(data) {
+                switch (data.type) {
+                    case 'full_state':
+                        this.handleFullState(data);
+                        break;
+                    case 'entity_update':
+                        this.handleEntityUpdate(data);
+                        break;
+                    case 'player_movement':
+                        this.handlePlayerMovement(data);
+                        break;
+                    default:
+                        console.log('Unknown message type:', data.type);
+                }
+            }
+            
+            handleFullState(data) {
+                console.log('📊 Received full state update');
+                
+                // Clear existing entities
+                this.entities.clear();
+                dungeonMap.entities.clear();
+                
+                // Update dungeon state
+                if (data.dungeon_state) {
+                    this.updateDungeonInfo(data.dungeon_state);
+                    
+                    if (data.dungeon_state.player_pos) {
+                        dungeonMap.updatePlayerPosition(
+                            data.dungeon_state.player_pos.x,
+                            data.dungeon_state.player_pos.y,
+                            data.dungeon_state.player_pos.z
+                        );
+                    }
+                }
+                
+                // Add entities
+                if (data.unique_entities) {
+                    for (const entityData of data.unique_entities) {
+                        this.addEntity(entityData);
+                    }
+                }
+                
+                // Update Avalonian floors
+                if (data.avalonian_floors) {
+                    this.updateAvalonianFloors(data.avalonian_floors);
+                }
+                
+                // Update statistics
+                if (data.stats) {
+                    this.updateStatistics(data.stats);
+                }
+                
+                // Store session start time
+                if (data.stats && data.stats.session_start) {
+                    this.sessionStartTime = data.stats.session_start * 1000; // Convert to milliseconds
+                }
+            }
+            
+            handleEntityUpdate(data) {
+                console.log('🎯 New entity detected:', data.entity.detected_name);
+                this.addEntity(data.entity);
+                this.showNotification(`New ${data.entity.type}: ${data.entity.display_name}`, 'success');
+            }
+            
+            handlePlayerMovement(data) {
+                if (data.position) {
+                    dungeonMap.updatePlayerPosition(
+                        data.position.x,
+                        data.position.y,
+                        data.position.z
+                    );
+                    
+                    // Update player info panel
+                    document.getElementById('player-x').textContent = data.position.x.toFixed(1);
+                    document.getElementById('player-y').textContent = data.position.y.toFixed(1);
+                    document.getElementById('player-z').textContent = data.position.z.toFixed(1);
+                    document.getElementById('last-update').textContent = new Date().toLocaleTimeString();
+                }
+            }
+            
+            addEntity(entityData) {
+                const entity = {
+                    id: entityData.unique_hash || entityData.id || Math.random().toString(36),
+                    name: entityData.display_name || entityData.detected_name,
+                    type: entityData.type,
+                    x: entityData.position?.x || 0,
+                    y: entityData.position?.y || 0,
+                    z: entityData.position?.z || 0,
+                    detected: entityData.detected_at,
+                    classification: entityData.enhanced_info?.type || entityData.classification,
+                    distance: entityData.distance_from_player || 0,
+                    detection_count: entityData.detection_count || 1,
+                    faction: entityData.enhanced_info?.faction || 'Unknown',
+                    threat_level: entityData.enhanced_info?.threat_level || 'Unknown',
+                    tier: entityData.enhanced_info?.tier || 0
+                };
+                
+                this.entities.set(entity.id, entity);
+                dungeonMap.addEntity(entity);
+                this.updateEntityList();
+                this.updateEntityCounts();
+            }
+            
+            updateDungeonInfo(dungeonState) {
+                document.getElementById('dungeon-type-detail').textContent = dungeonState.dungeon_type || 'Unknown';
+                document.getElementById('session-id').textContent = dungeonState.session_id || '--';
+                document.getElementById('in-dungeon').textContent = dungeonState.in_dungeon ? 'Yes' : 'No';
+                document.getElementById('current-floor').textContent = dungeonState.floor || 0;
+                document.getElementById('dungeon-type').textContent = dungeonState.dungeon_type || 'Scanning...';
+                
+                if (dungeonState.last_update) {
+                    const updateTime = new Date(dungeonState.last_update * 1000);
+                    document.getElementById('session-start').textContent = updateTime.toLocaleTimeString();
+                }
+            }
+            
+            updateAvalonianFloors(floors) {
+                const container = document.getElementById('avalonian-floors');
+                
+                if (!floors || Object.keys(floors).length === 0) {
+                    container.innerHTML = '<div style="color: #888;">No Avalonian dungeon detected</div>';
+                    return;
+                }
+                
+                let html = '';
+                for (const [floorId, floorData] of Object.entries(floors)) {
+                    const entityCount = Object.keys(floorData.entities || {}).length;
+                    const status = floorData.completed ? '✅' : '🔄';
+                    
+                    html += `
+                        <div style="margin: 8px 0; padding: 8px; background: rgba(60,60,60,0.3); border-radius: 4px;">
+                            <div><strong>Floor ${floorId}:</strong> ${floorData.floor_type} ${status}</div>
+                            <div style="font-size: 11px; color: #aaa;">Entities: ${entityCount}</div>
+                        </div>
+                    `;
+                }
+                
+                container.innerHTML = html;
+            }
+            
+            updateStatistics(stats) {
+                // Basic stats
+                document.getElementById('mob-count').textContent = stats.unique_mobs?.length || 0;
+                document.getElementById('chest-count').textContent = stats.unique_chests?.length || 0;
+                document.getElementById('boss-count').textContent = 
+                    Array.from(this.entities.values()).filter(e => e.type === 'bosses').length;
+                document.getElementById('detection-rate').textContent = (stats.detection_rate || 0).toFixed(1);
+                document.getElementById('opcode-count').textContent = stats.opcodes_detected || 0;
+                document.getElementById('floor-count').textContent = stats.floors_discovered || 0;
+                
+                // Duplicate rate
+                if (stats.dedup_stats) {
+                    document.getElementById('duplicate-rate').textContent = 
+                        (stats.dedup_stats.duplicate_rate || 0).toFixed(1) + '%';
+                }
+                
+                // Success rate
+                if (stats.opcodes_detected && stats.entities_detected) {
+                    const successRate = (stats.entities_detected / stats.opcodes_detected) * 100;
+                    document.getElementById('success-rate').textContent = successRate.toFixed(1) + '%';
+                }
+            }
+            
+            updateEntityList() {
+                const container = document.getElementById('entity-list');
+                const entityArray = Array.from(this.entities.values());
+                
+                if (entityArray.length === 0) {
+                    container.innerHTML = '<div style="color: #888; text-align: center; padding: 20px;">No entities detected</div>';
+                    return;
+                }
+                
+                // Group by type
+                const grouped = entityArray.reduce((acc, entity) => {
+                    if (!acc[entity.type]) acc[entity.type] = [];
+                    acc[entity.type].push(entity);
+                    return acc;
+                }, {});
+                
+                let html = '';
+                
+                for (const [type, entities] of Object.entries(grouped)) {
+                    const typeIcons = {
+                        'chests': '📦',
+                        'bosses': '👑', 
+                        'mobs': '👹',
+                        'shrines': '⭐'
+                    };
+                    
+                    html += `<div style="margin: 15px 0;"><strong style="color: #ffd700;">${typeIcons[type] || '❓'} ${type.toUpperCase()} (${entities.length})</strong></div>`;
+                    
+                    entities.sort((a, b) => b.detected - a.detected).slice(0, 10).forEach(entity => {
+                        const isSelected = this.selectedEntity === entity.id;
+                        const detectionTime = new Date(entity.detected * 1000).toLocaleTimeString();
+                        
+                        html += `
+                            <div class="entity-item entity-${entity.type} ${isSelected ? 'selected' : ''}" 
+                                 onclick="scannerClient.selectEntity('${entity.id}')">
+                                <div class="entity-icon">${typeIcons[entity.type] || '❓'}</div>
+                                <div class="entity-info">
+                                    <div class="entity-name">${entity.name}</div>
+                                    <div class="entity-meta">${detectionTime} | ${entity.faction}</div>
+                                </div>
+                                <div class="entity-distance">
+                                    ${entity.distance > 0 ? entity.distance + 'm' : '--'}
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+                
+                container.innerHTML = html;
+            }
+            
+            updateEntityCounts() {
+                document.getElementById('total-entity-count').textContent = this.entities.size;
+            }
+            
+            selectEntity(entityId) {
+                this.selectedEntity = entityId;
+                const entity = this.entities.get(entityId);
+                
+                if (entity) {
+                    // Update selected entity panel
+                    const container = document.getElementById('selected-entity');
+                    container.innerHTML = `
+                        <div><strong>Name:</strong> ${entity.name}</div>
+                        <div><strong>Type:</strong> ${entity.classification}</div>
+                        <div><strong>Position:</strong> (${entity.x.toFixed(1)}, ${entity.y.toFixed(1)}, ${entity.z.toFixed(1)})</div>
+                        <div><strong>Distance:</strong> ${entity.distance}m</div>
+                        <div><strong>Faction:</strong> ${entity.faction}</div>
+                        <div><strong>Threat:</strong> ${entity.threat_level}</div>
+                        <div><strong>Tier:</strong> T${entity.tier}</div>
+                        <div><strong>Detected:</strong> ${new Date(entity.detected * 1000).toLocaleTimeString()}</div>
+                        <div><strong>Count:</strong> ${entity.detection_count}x</div>
+                    `;
+                    
+                    // Highlight on map
+                    dungeonMap.selectEntity(entityId);
+                }
+                
+                this.updateEntityList(); // Refresh to show selection
+            }
+            
+            startPerformanceMonitoring() {
+                setInterval(() => {
+                    // Update runtime
+                    if (this.sessionStartTime) {
+                        const runtime = Date.now() - this.sessionStartTime;
+                        const minutes = Math.floor(runtime / 60000);
+                        const seconds = Math.floor((runtime % 60000) / 1000);
+                        document.getElementById('runtime').textContent = 
+                            `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                    }
+                    
+                    // Update footer stats
+                    document.getElementById('footer-stats').textContent = 
+                        `Entities: ${this.entities.size} | Packets: ${this.packetCount} | Connected: ${this.ws?.readyState === WebSocket.OPEN ? 'Yes' : 'No'}`;
+                    
+                    // Calculate packet rate
+                    const timeSinceLastPacket = Date.now() - this.lastPacketTime;
+                    if (timeSinceLastPacket < 5000) { // Within last 5 seconds
+                        document.getElementById('packet-rate').textContent = '~active';
+                    } else {
+                        document.getElementById('packet-rate').textContent = '0';
+                    }
+                    
+                }, 1000);
+            }
+            
+            showNotification(message, type = 'info') {
+                const notification = document.getElementById('notification');
+                notification.textContent = message;
+                notification.className = `notification ${type} show`;
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 3000);
+            }
+        }
+        
+        // Enhanced Map Renderer
+        class EnhancedDungeonMap {
+            constructor() {
+                this.canvas = document.getElementById('map-canvas');
+                this.ctx = this.canvas.getContext('2d');
+                this.miniCanvas = document.getElementById('mini-map-canvas');
+                this.miniCtx = this.miniCanvas.getContext('2d');
+                
+                this.entities = new Map();
+                this.selectedEntityId = null;
+                this.playerPos = { x: 0, y: 0, z: 0 };
+                this.playerTrail = [];
+                this.zoom = 1;
+                this.offsetX = 0;
+                this.offsetY = 0;
+                this.showGrid = true;
+                this.showTrails = false;
+                
+                this.setupCanvas();
+                this.setupEventListeners();
+                this.startRenderLoop();
+            }
+            
+            setupCanvas() {
+                this.resizeCanvas();
+                window.addEventListener('resize', () => this.resizeCanvas());
+            }
+            
+            resizeCanvas() {
+                const container = this.canvas.parentElement;
+                this.canvas.width = container.clientWidth;
+                this.canvas.height = container.clientHeight;
+            }
+            
+            setupEventListeners() {
+                this.canvas.addEventListener('click', (e) => this.handleMapClick(e));
+                this.canvas.addEventListener('wheel', (e) => this.handleZoom(e));
+                this.canvas.addEventListener('mousemove', (e) => this.handleMouseMove(e));
+            }
+            
+            handleMapClick(e) {
+                const rect = this.canvas.getBoundingClientRect();
+                const x = (e.clientX - rect.left - this.canvas.width / 2 - this.offsetX) / this.zoom;
+                const y = (e.clientY - rect.top - this.canvas.height / 2 - this.offsetY) / this.zoom;
+                
+                // Find clicked entity
+                let closestEntity = null;
+                let closestDistance = Infinity;
+                
+                for (const [id, entity] of this.entities) {
+                    const dx = entity.x - x;
+                    const dy = entity.y - y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 30 && distance < closestDistance) {
+                        closestEntity = { id, entity };
+                        closestDistance = distance;
+                    }
+                }
+                
+                if (closestEntity) {
+                    scannerClient.selectEntity(closestEntity.id);
+                }
+            }
+            
+            handleZoom(e) {
+                e.preventDefault();
+                const zoomFactor = e.deltaY > 0 ? 0.9 : 1.1;
+                this.zoom = Math.max(0.1, Math.min(5, this.zoom * zoomFactor));
+            }
+            
+            handleMouseMove(e) {
+                // Could add hover effects here
+            }
+            
+            addEntity(entity) {
+                this.entities.set(entity.id, entity);
+            }
+            
+            updatePlayerPosition(x, y, z) {
+                this.playerPos = { x, y, z };
+                
+                // Add to trail
+                if (this.showTrails) {
+                    this.playerTrail.push({ x, y, timestamp: Date.now() });
+                    
+                    // Limit trail length
+                    if (this.playerTrail.length > 100) {
+                        this.playerTrail.shift();
+                    }
+                }
+            }
+            
+            selectEntity(entityId) {
+                this.selectedEntityId = entityId;
+            }
+            
+            render() {
+                this.ctx.fillStyle = '#000000';
+                this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                this.ctx.save();
+                this.ctx.translate(this.canvas.width / 2 + this.offsetX, this.canvas.height / 2 + this.offsetY);
+                this.ctx.scale(this.zoom, this.zoom);
+                
+                if (this.showGrid) {
+                    this.drawGrid();
+                }
+                
+                if (this.showTrails && this.playerTrail.length > 1) {
+                    this.drawPlayerTrail();
+                }
+                
+                this.drawEntities();
+                this.drawPlayer();
+                
+                this.ctx.restore();
+                
+                this.renderMiniMap();
+            }
+            
+            drawGrid() {
+                this.ctx.strokeStyle = 'rgba(100, 100, 100, 0.2)';
+                this.ctx.lineWidth = 1;
+                
+                const gridSize = 100;
+                
+                for (let x = -2000; x <= 2000; x += gridSize) {
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(x, -2000);
+                    this.ctx.lineTo(x, 2000);
+                    this.ctx.stroke();
+                }
+                
+                for (let y = -2000; y <= 2000; y += gridSize) {
+                    this.ctx.beginPath();
+                    this.ctx.moveTo(-2000, y);
+                    this.ctx.lineTo(2000, y);
+                    this.ctx.stroke();
+                }
+            }
+            
+            drawPlayerTrail() {
+                if (this.playerTrail.length < 2) return;
+                
+                this.ctx.strokeStyle = 'rgba(0, 170, 255, 0.5)';
+                this.ctx.lineWidth = 3;
+                this.ctx.beginPath();
+                
+                this.ctx.moveTo(this.playerTrail[0].x, this.playerTrail[0].y);
+                for (let i = 1; i < this.playerTrail.length; i++) {
+                    this.ctx.lineTo(this.playerTrail[i].x, this.playerTrail[i].y);
+                }
+                this.ctx.stroke();
+            }
+            
+            drawEntities() {
+                for (const [id, entity] of this.entities) {
+                    this.drawEntity(entity, id === this.selectedEntityId);
+                }
+            }
+            
+            drawEntity(entity, isSelected = false) {
+                const colors = {
+                    'mobs': '#ff4444',
+                    'chests': '#44ff44',
+                    'bosses': '#ff8800',
+                    'shrines': '#8844ff'
+                };
+                
+                const size = isSelected ? 12 : 8;
+                const color = colors[entity.type] || '#888888';
+                
+                // Draw entity
+                this.ctx.fillStyle = color;
+                this.ctx.beginPath();
+                this.ctx.arc(entity.x, entity.y, size, 0, 2 * Math.PI);
+                this.ctx.fill();
+                
+                // Draw selection ring
+                if (isSelected) {
+                    this.ctx.strokeStyle = '#ffd700';
+                    this.ctx.lineWidth = 3;
+                    this.ctx.beginPath();
+                    this.ctx.arc(entity.x, entity.y, size + 5, 0, 2 * Math.PI);
+                    this.ctx.stroke();
+                }
+                
+                // Draw label
+                this.ctx.fillStyle = '#ffffff';
+                this.ctx.font = '12px Arial';
+                this.ctx.textAlign = 'center';
+                const name = entity.name.length > 15 ? entity.name.substring(0, 15) + '...' : entity.name;
+                this.ctx.fillText(name, entity.x, entity.y - size - 8);
+                
+                // Draw detection count badge
+                if (entity.detection_count > 1) {
+                    this.ctx.fillStyle = '#ffd700';
+                    this.ctx.fillRect(entity.x + size - 8, entity.y - size - 8, 16, 12);
+                    this.ctx.fillStyle = '#000000';
+                    this.ctx.font = '10px Arial';
+                    this.ctx.fillText(entity.detection_count.toString(), entity.x + size, entity.y - size - 2);
+                }
+            }
+            
+            drawPlayer() {
+                // Draw player with enhanced visualization
+                this.ctx.fillStyle = '#00aaff';
+                this.ctx.strokeStyle = '#ffffff';
+                this.ctx.lineWidth = 2;
+                
+                this.ctx.beginPath();
+                this.ctx.arc(this.playerPos.x, this.playerPos.y, 12, 0, 2 * Math.PI);
+                this.ctx.fill();
+                this.ctx.stroke();
+                
+                // Draw direction indicator
+                this.ctx.beginPath();
+                this.ctx.moveTo(this.playerPos.x, this.playerPos.y);
+                this.ctx.lineTo(this.playerPos.x, this.playerPos.y - 20);
+                this.ctx.stroke();
+                
+                // Player label
+                this.ctx.fillStyle = '#ffffff';
+                this.ctx.font = 'bold 14px Arial';
+                this.ctx.textAlign = 'center';
+                this.ctx.fillText('YOU', this.playerPos.x, this.playerPos.y - 25);
+            }
+            
+            renderMiniMap() {
+                this.miniCtx.fillStyle = '#000000';
+                this.miniCtx.fillRect(0, 0, 176, 176);
+                
+                const scale = 0.05;
+                const centerX = 88;
+                const centerY = 88;
+                
+                // Draw entities on mini-map
+                for (const [id, entity] of this.entities) {
+                    const x = centerX + entity.x * scale;
+                    const y = centerY + entity.y * scale;
+                    
+                    if (x >= 0 && x <= 176 && y >= 0 && y <= 176) {
+                        const colors = {
+                            'mobs': '#ff4444',
+                            'chests': '#44ff44', 
+                            'bosses': '#ff8800',
+                            'shrines': '#8844ff'
+                        };
+                        
+                        this.miniCtx.fillStyle = colors[entity.type] || '#888888';
+                        this.miniCtx.fillRect(x - 2, y - 2, 4, 4);
+                    }
+                }
+                
+                // Draw player on mini-map
+                const playerX = centerX + this.playerPos.x * scale;
+                const playerY = centerY + this.playerPos.y * scale;
+                this.miniCtx.fillStyle = '#00aaff';
+                this.miniCtx.fillRect(playerX - 3, playerY - 3, 6, 6);
+            }
+            
+            startRenderLoop() {
+                const render = () => {
+                    this.render();
+                    requestAnimationFrame(render);
+                };
+                render();
+            }
+        }
+        
+        // Global functions for controls
+        function zoomIn() {
+            dungeonMap.zoom = Math.min(5, dungeonMap.zoom * 1.2);
+        }
+        
+        function zoomOut() {
+            dungeonMap.zoom = Math.max(0.1, dungeonMap.zoom / 1.2);
+        }
+        
+        function resetView() {
+            dungeonMap.zoom = 1;
+            dungeonMap.offsetX = 0;
+            dungeonMap.offsetY = 0;
+        }
+        
+        function toggleGrid() {
+            dungeonMap.showGrid = !dungeonMap.showGrid;
+        }
+        
+        function toggleTrails() {
+            dungeonMap.showTrails = !dungeonMap.showTrails;
+            if (!dungeonMap.showTrails) {
+                dungeonMap.playerTrail = [];
+            }
+        }
+        
+        function requestFullState() {
+            scannerClient.send({type: 'get_state'});
+            scannerClient.showNotification('Refreshing data...', 'info');
+        }
+        
+        function exportJSON() {
+            const data = {
+                timestamp: Date.now(),
+                entities: Array.from(scannerClient.entities.values()),
+                player_position: dungeonMap.playerPos,
+                session_info: {
+                    start_time: scannerClient.sessionStartTime,
+                    entity_count: scannerClient.entities.size,
+                    export_time: new Date().toISOString()
+                }
+            };
+            
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `albion_scan_${Date.now()}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            scannerClient.showNotification('JSON data exported!', 'success');
+        }
+        
+        function exportCSV() {
+            const entities = Array.from(scannerClient.entities.values());
+            const headers = ['Name', 'Type', 'X', 'Y', 'Z', 'Classification', 'Faction', 'Threat', 'Distance', 'Detected'];
+            
+            const rows = entities.map(e => [
+                e.name, e.type, e.x.toFixed(2), e.y.toFixed(2), e.z.toFixed(2),
+                e.classification, e.faction, e.threat_level, e.distance.toFixed(1),
+                new Date(e.detected * 1000).toISOString()
+            ]);
+            
+            const csv = [headers, ...rows].map(row => 
+                row.map(field => `"${field}"`).join(',')
+            ).join('\n');
+            
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `albion_entities_${Date.now()}.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            scannerClient.showNotification('CSV data exported!', 'success');
+        }
+        
+        function saveMapImage() {
+            const link = document.createElement('a');
+            link.download = `albion_map_${Date.now()}.png`;
+            link.href = dungeonMap.canvas.toDataURL();
+            link.click();
+            
+            scannerClient.showNotification('Map image saved!', 'success');
+        }
+        
+        // Initialize application
+        let scannerClient;
+        let dungeonMap;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🚀 Starting Complete Albion Scanner Visualizer v4.0');
+            
+            dungeonMap = new EnhancedDungeonMap();
+            scannerClient = new AdvancedScannerClient();
+            
+            console.log('✅ Visualizer initialized successfully');
+        });
+    </script>
+</body>
+</html>

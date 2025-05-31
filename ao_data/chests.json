@@ -1,0 +1,140 @@
+{
+  "CHEST_RARE": {
+    "display_name": "Rare Treasure Chest",
+    "rarity": "🔵 RARE",
+    "tier": 4,
+    "value": "Medium"
+  },
+  "CHEST_EPIC": {
+    "display_name": "Epic Treasure Chest",
+    "rarity": "🟣 EPIC",
+    "tier": 6,
+    "value": "High"
+  },
+  "CHEST_LEGENDARY": {
+    "display_name": "Legendary Treasure Chest",
+    "rarity": "🏆 LEGENDARY",
+    "tier": 8,
+    "value": "Very High"
+  },
+  "TREASURE_CHEST_SOLO_STANDARD": {
+    "display_name": "Solo Standard Chest",
+    "rarity": "🟢 STANDARD",
+    "tier": 2,
+    "value": "Low"
+  },
+  "TREASURE_CHEST_SOLO_UNCOMMON": {
+    "display_name": "Solo Uncommon Chest",
+    "rarity": "🟢 UNCOMMON",
+    "tier": 3,
+    "value": "Low-Medium"
+  },
+  "TREASURE_CHEST_SOLO_RARE": {
+    "display_name": "Solo Rare Chest",
+    "rarity": "🔵 RARE",
+    "tier": 4,
+    "value": "Medium"
+  },
+  "TREASURE_CHEST_SOLO_EPIC": {
+    "display_name": "Solo Epic Chest",
+    "rarity": "🟣 EPIC",
+    "tier": 6,
+    "value": "High"
+  },
+  "TREASURE_CHEST_SOLO_LEGENDARY": {
+    "display_name": "Solo Legendary Chest",
+    "rarity": "🏆 LEGENDARY",
+    "tier": 8,
+    "value": "Very High"
+  },
+  "TREASURE_CHEST_GROUP_STANDARD": {
+    "display_name": "Group Standard Chest",
+    "rarity": "🟢 STANDARD",
+    "tier": 3,
+    "value": "Low-Medium"
+  },
+  "TREASURE_CHEST_GROUP_UNCOMMON": {
+    "display_name": "Group Uncommon Chest",
+    "rarity": "🟢 UNCOMMON",
+    "tier": 4,
+    "value": "Medium"
+  },
+  "TREASURE_CHEST_GROUP_RARE": {
+    "display_name": "Group Rare Chest",
+    "rarity": "🔵 RARE",
+    "tier": 5,
+    "value": "Medium-High"
+  },
+  "TREASURE_CHEST_GROUP_EPIC": {
+    "display_name": "Group Epic Chest",
+    "rarity": "🟣 EPIC",
+    "tier": 7,
+    "value": "High"
+  },
+  "TREASURE_CHEST_GROUP_LEGENDARY": {
+    "display_name": "Group Legendary Chest",
+    "rarity": "🏆 LEGENDARY",
+    "tier": 8,
+    "value": "Very High"
+  },
+  "TREASURE_CHEST_AVALONIAN_STANDARD": {
+    "display_name": "Avalonian Standard Chest",
+    "rarity": "⚪ AVALONIAN",
+    "tier": 4,
+    "value": "Special"
+  },
+  "TREASURE_CHEST_AVALONIAN_UNCOMMON": {
+    "display_name": "Avalonian Uncommon Chest",
+    "rarity": "⚪ AVALONIAN",
+    "tier": 5,
+    "value": "Special"
+  },
+  "TREASURE_CHEST_AVALONIAN_RARE": {
+    "display_name": "Avalonian Rare Chest",
+    "rarity": "⚪ AVALONIAN",
+    "tier": 6,
+    "value": "Special-High"
+  },
+  "TREASURE_CHEST_AVALONIAN_EPIC": {
+    "display_name": "Avalonian Epic Chest",
+    "rarity": "⚪ AVALONIAN",
+    "tier": 7,
+    "value": "Special-High"
+  },
+  "TREASURE_CHEST_AVALONIAN_LEGENDARY": {
+    "display_name": "Avalonian Legendary Chest",
+    "rarity": "⚪ AVALONIAN",
+    "tier": 8,
+    "value": "Special-Very High"
+  },
+  "KEEPER_SOLO_CHEST_STANDARD": {
+    "display_name": "Keeper Solo Standard Chest",
+    "rarity": "🟢 STANDARD",
+    "tier": 2,
+    "value": "Low"
+  },
+  "KEEPER_SOLO_CHEST_RARE": {
+    "display_name": "Keeper Solo Rare Chest",
+    "rarity": "🔵 RARE",
+    "tier": 4,
+    "value": "Medium"
+  },
+  "KEEPER_GROUP_CHEST_STANDARD": {
+    "display_name": "Keeper Group Standard Chest",
+    "rarity": "🟢 STANDARD",
+    "tier": 3,
+    "value": "Low-Medium"
+  },
+  "KEEPER_GROUP_CHEST_RARE": {
+    "display_name": "Keeper Group Rare Chest",
+    "rarity": "🔵 RARE",
+    "tier": 5,
+    "value": "Medium-High"
+  },
+  "BOOK_CHEST": {
+    "display_name": "Fame Book Chest",
+    "rarity": "📚 BOOK",
+    "tier": 0,
+    "value": "Fame"
+  }
+}

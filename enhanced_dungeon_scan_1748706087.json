@@ -1,0 +1,34 @@
+{
+  "scanner_version": "2.0",
+  "timestamp": 1748706087.1381369,
+  "session_duration": 124.67852973937988,
+  "stats": {
+    "session_start": 1748705962.4596076,
+    "packets_analyzed": 8119,
+    "entities_detected": 0,
+    "unique_mobs": [],
+    "unique_chests": [],
+    "detection_rate": 0,
+    "avg_detection_time": 0
+  },
+  "dungeon_state": {
+    "in_dungeon": false,
+    "dungeon_name": "Unknown",
+    "floor": 0,
+    "entities": {},
+    "player_pos": {
+      "x": -0.03,
+      "y": -0.43,
+      "z": -10.31
+    },
+    "last_update": 1748706087.1284823
+  },
+  "live_entities": [],
+  "detection_history": [],
+  "interface_used": "\\Device\\NPF_{6B3C185F-8A6A-48FA-89E8-F4E0E10196E0}",
+  "servers_monitored": [
+    "13.35.238.120",
+    "5.45.187.30",
+    "35.174.127.31"
+  ]
+}

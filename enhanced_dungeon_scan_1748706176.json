@@ -1,0 +1,94 @@
+{
+  "scanner_version": "2.0",
+  "timestamp": 1748706176.83015,
+  "session_duration": 77.02639436721802,
+  "stats": {
+    "session_start": 1748706099.803756,
+    "packets_analyzed": 4867,
+    "entities_detected": 2,
+    "unique_mobs": [
+      "KEEPER_SOLO_CHEST_STANDARD"
+    ],
+    "unique_chests": [],
+    "detection_rate": 2.2708597616306974,
+    "avg_detection_time": 0
+  },
+  "dungeon_state": {
+    "in_dungeon": true,
+    "dungeon_name": "SOLO_",
+    "floor": 0,
+    "entities": {},
+    "player_pos": {
+      "x": -0.43,
+      "y": -0.13,
+      "z": -1.78
+    },
+    "last_update": 1748706176.7736356
+  },
+  "live_entities": [
+    {
+      "id": "mobs_5634582330024499679",
+      "name": "KEEPER_SOLO_CHEST_STANDARD",
+      "type": "mobs",
+      "classification": "\ud83d\udee1\ufe0f KEEPER",
+      "detected_at": 1748706152.6469922,
+      "timestamp": "22:42:32.646",
+      "position": {
+        "x": -230.01,
+        "y": 2.01,
+        "z": 230.01
+      },
+      "distance_from_player": 2078.4
+    },
+    {
+      "id": "dungeon_types_5090294228191241951",
+      "name": "SOLO_CHEST_STANDARD",
+      "type": "dungeon_types",
+      "classification": "\u2753 UNKNOWN",
+      "detected_at": 1748706152.6471567,
+      "timestamp": "22:42:32.647",
+      "position": {
+        "x": -230.01,
+        "y": 2.01,
+        "z": 230.01
+      },
+      "distance_from_player": 2078.4
+    }
+  ],
+  "detection_history": [
+    {
+      "id": "mobs_5634582330024499679",
+      "name": "KEEPER_SOLO_CHEST_STANDARD",
+      "type": "mobs",
+      "classification": "\ud83d\udee1\ufe0f KEEPER",
+      "detected_at": 1748706152.6469922,
+      "timestamp": "22:42:32.646",
+      "position": {
+        "x": -230.01,
+        "y": 2.01,
+        "z": 230.01
+      },
+      "distance_from_player": 2078.4
+    },
+    {
+      "id": "dungeon_types_5090294228191241951",
+      "name": "SOLO_CHEST_STANDARD",
+      "type": "dungeon_types",
+      "classification": "\u2753 UNKNOWN",
+      "detected_at": 1748706152.6471567,
+      "timestamp": "22:42:32.647",
+      "position": {
+        "x": -230.01,
+        "y": 2.01,
+        "z": 230.01
+      },
+      "distance_from_player": 2078.4
+    }
+  ],
+  "interface_used": "\\Device\\NPF_{6B3C185F-8A6A-48FA-89E8-F4E0E10196E0}",
+  "servers_monitored": [
+    "35.174.127.31",
+    "5.45.187.30",
+    "13.35.238.120"
+  ]
+}

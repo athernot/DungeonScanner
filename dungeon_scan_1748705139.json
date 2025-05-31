@@ -1,0 +1,30 @@
+{
+  "timestamp": 1748705139.8099136,
+  "session_duration": 20.222305297851562,
+  "stats": {
+    "packets_analyzed": 1202,
+    "mobs_detected": 0,
+    "chests_detected": 0,
+    "items_detected": 0,
+    "session_start": 1748705119.5876088
+  },
+  "current_dungeon": {
+    "in_dungeon": false,
+    "dungeon_id": null,
+    "floor": 0,
+    "mobs": {},
+    "chests": {},
+    "player_position": {
+      "x": 7.182374477386475,
+      "y": -3156.04150390625,
+      "z": -0.49801740050315857
+    }
+  },
+  "recent_detections": [],
+  "interface_used": "\\Device\\NPF_{6B3C185F-8A6A-48FA-89E8-F4E0E10196E0}",
+  "servers_monitored": [
+    "5.45.187.30",
+    "13.35.238.120",
+    "35.174.127.31"
+  ]
+}

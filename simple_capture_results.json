@@ -1,0 +1,1655 @@
+{
+  "timestamp": 1748703202.7052276,
+  "interface": "\\Device\\NPF_{6B3C185F-8A6A-48FA-89E8-F4E0E10196E0}",
+  "total_packets": 193,
+  "udp_packets": 193,
+  "interesting_packets_count": 181,
+  "interesting_packets": [
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 235,
+      "payload_size": 193,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877aa01fcd4000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 68,
+      "payload_size": 26,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "81d000020881aa4afea984f980000aa6"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 247,
+      "payload_size": 205,
+      "reason": "High entropy payload",
+      "hex_preview": "9078726801fd13c0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 223,
+      "payload_size": 181,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877ab01fcd7c00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 243,
+      "payload_size": 201,
+      "reason": "High entropy payload",
+      "hex_preview": "9078726901fd1780aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "5.45.187.53:5056",
+      "dst": "192.168.143.243:50367",
+      "size": 131,
+      "payload_size": 89,
+      "reason": "Gaming port 5056/50367",
+      "hex_preview": "000000015b764bc267bcb5ba06000100"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50367",
+      "dst": "5.45.187.53:5056",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "3f820001000a942167bcb5ba01000004"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 248,
+      "payload_size": 206,
+      "reason": "High entropy payload",
+      "hex_preview": "9078726a01fd1b40aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 215,
+      "payload_size": 173,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877ac01fcdb800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 229,
+      "payload_size": 187,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877ad01fcdf400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50367",
+      "dst": "5.45.187.53:5056",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "3f820001000a947567bcb5ba05ff0104"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 268,
+      "payload_size": 226,
+      "reason": "High entropy payload",
+      "hex_preview": "9078726b01fd1f00aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "5.45.187.53:5056",
+      "dst": "192.168.143.243:50367",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Gaming port 5056/50367",
+      "hex_preview": "000000015b764c4f67bcb5ba01ff0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 164,
+      "payload_size": 122,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "81c800120881aa4a0324a8abf9209dac"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 228,
+      "payload_size": 186,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877ae01fce3000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 252,
+      "payload_size": 210,
+      "reason": "High entropy payload",
+      "hex_preview": "9078726c01fd22c0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 236,
+      "payload_size": 194,
+      "reason": "High entropy payload",
+      "hex_preview": "9078726d01fd2680aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 215,
+      "payload_size": 173,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877af01fce6c00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 227,
+      "payload_size": 185,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877b001fcea800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "5.45.187.30:5055",
+      "dst": "192.168.143.243:61356",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "Gaming port 5055/61356",
+      "hex_preview": "000000015b75904201cbfd1b05ff0100"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 235,
+      "payload_size": 193,
+      "reason": "High entropy payload",
+      "hex_preview": "9078726e01fd2a40aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:61356",
+      "dst": "5.45.187.30:5055",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "835700010160330001cbfd1b01ff0004"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:61356",
+      "dst": "5.45.187.30:5055",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "835700010160330801cbfd1b05ff0104"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 226,
+      "payload_size": 184,
+      "reason": "High entropy payload",
+      "hex_preview": "9078726f01fd2e00aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 236,
+      "payload_size": 194,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877b101fcee400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:61356",
+      "dst": "5.45.187.30:5055",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "835700010160336401cbfd1b05ff0104"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 212,
+      "payload_size": 170,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877b201fcf2000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 164,
+      "payload_size": 122,
+      "reason": "High entropy payload",
+      "hex_preview": "81c80012aa4045c5693abb750105ce42"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 224,
+      "payload_size": 182,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727001fd31c0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:62699",
+      "dst": "5.45.187.119:4535",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "6ef70001015e326f5bf27e2505ff0104"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "5.45.187.119:4535",
+      "dst": "192.168.143.243:62699",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "High entropy payload",
+      "hex_preview": "000000015b7570085bf27e2505ff0100"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:62699",
+      "dst": "5.45.187.119:4535",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "6ef70001015e32885bf27e2501ff0004"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "5.45.187.30:5055",
+      "dst": "192.168.143.243:61356",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Gaming port 5055/61356",
+      "hex_preview": "000000015b7590ee01cbfd1b01ff0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 214,
+      "payload_size": 172,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877b301fcf5c00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 215,
+      "payload_size": 173,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727101fd3580aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "5.45.187.119:4535",
+      "dst": "192.168.143.243:62699",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "High entropy payload",
+      "hex_preview": "000000015b7570475bf27e2501ff0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 211,
+      "payload_size": 169,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727201fd3940aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 232,
+      "payload_size": 190,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877b401fcf9800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 215,
+      "payload_size": 173,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877b501fcfd400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 239,
+      "payload_size": 197,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727301fd3d00aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 220,
+      "payload_size": 178,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877b601fd01000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 62,
+      "payload_size": 20,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "080100002112a442d15e3f7f034bf611"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50367",
+      "dst": "5.45.187.53:5056",
+      "size": 180,
+      "payload_size": 138,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "3f820002000a969e67bcb5ba06000104"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 203,
+      "payload_size": 161,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727401fd40c0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 62,
+      "payload_size": 20,
+      "reason": "High entropy payload",
+      "hex_preview": "080200002112a442d15e3f7f034bf611"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 217,
+      "payload_size": 175,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877b701fd04c00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 235,
+      "payload_size": 193,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727501fd4480aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "5.45.187.53:5056",
+      "dst": "192.168.143.243:50367",
+      "size": 94,
+      "payload_size": 52,
+      "reason": "Gaming port 5056/50367",
+      "hex_preview": "000000025b764e8167bcb5ba01000000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 214,
+      "payload_size": 172,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877b801fd08800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 210,
+      "payload_size": 168,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727601fd4840aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 219,
+      "payload_size": 177,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727701fd4c00aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:19",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 206,
+      "payload_size": 164,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877b901fd0c400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 216,
+      "payload_size": 174,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877ba01fd10000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 201,
+      "payload_size": 159,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727801fd4fc0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 214,
+      "payload_size": 172,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727901fd5380aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 67,
+      "payload_size": 25,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877bb01fd13c00881aa4adebe0001"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 68,
+      "payload_size": 26,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "81d000020881aa4ac9ef1d1f80000aa8"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 232,
+      "payload_size": 190,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727a01fd5740aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 246,
+      "payload_size": 204,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727b01fd5b00aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "5.45.187.53:5056",
+      "dst": "192.168.143.243:50367",
+      "size": 131,
+      "payload_size": 89,
+      "reason": "Gaming port 5056/50367",
+      "hex_preview": "000000015b764fd967bcb5ba06000100"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50367",
+      "dst": "5.45.187.53:5056",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "3f820001000a984167bcb5ba01000004"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 258,
+      "payload_size": 216,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727c01fd5ec0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 234,
+      "payload_size": 192,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877bc01fd22c00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 226,
+      "payload_size": 184,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727d01fd6280aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "5.45.187.53:5056",
+      "dst": "192.168.143.243:50367",
+      "size": 206,
+      "payload_size": 164,
+      "reason": "Gaming port 5056/50367",
+      "hex_preview": "000000035b76506667bcb5ba06000100"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50367",
+      "dst": "5.45.187.53:5056",
+      "size": 114,
+      "payload_size": 72,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "3f820003000a98cf67bcb5ba01000004"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 241,
+      "payload_size": 199,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727e01fd6640aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "5.45.187.53:5056",
+      "dst": "192.168.143.243:50367",
+      "size": 166,
+      "payload_size": 124,
+      "reason": "Gaming port 5056/50367",
+      "hex_preview": "000000015b76507567bcb5ba06000100"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50367",
+      "dst": "5.45.187.53:5056",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "3f820001000a98df67bcb5ba01000004"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 240,
+      "payload_size": 198,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877bd01fd26800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 215,
+      "payload_size": 173,
+      "reason": "High entropy payload",
+      "hex_preview": "9078727f01fd6a00aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 220,
+      "payload_size": 178,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877be01fd2a400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 226,
+      "payload_size": 184,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877bf01fd2e000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 232,
+      "payload_size": 190,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728001fd6dc0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 225,
+      "payload_size": 183,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728101fd7180aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 217,
+      "payload_size": 175,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877c001fd31c00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 68,
+      "payload_size": 26,
+      "reason": "High entropy payload",
+      "hex_preview": "81d00002aa4045c5ecab6b0980000aa8"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "5.45.187.30:5055",
+      "dst": "192.168.143.243:61356",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "Gaming port 5055/61356",
+      "hex_preview": "000000015b7594c601cbfd1b05ff0100"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:61356",
+      "dst": "5.45.187.30:5055",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "835700010160377801cbfd1b01ff0004"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "5.45.187.53:5056",
+      "dst": "192.168.143.243:50367",
+      "size": 131,
+      "payload_size": 89,
+      "reason": "Gaming port 5056/50367",
+      "hex_preview": "000000015b76515067bcb5ba06000100"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50367",
+      "dst": "5.45.187.53:5056",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "3f820001000a99b867bcb5ba01000004"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:61356",
+      "dst": "5.45.187.30:5055",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "835700010160378a01cbfd1b05ff0104"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 237,
+      "payload_size": 195,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877c101fd35800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 249,
+      "payload_size": 207,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728201fd7540aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:62699",
+      "dst": "5.45.187.119:4535",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "6ef70001015e36b15bf27e2505ff0104"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "5.45.187.119:4535",
+      "dst": "192.168.143.243:62699",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "High entropy payload",
+      "hex_preview": "000000015b75743e5bf27e2505ff0100"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "5.45.187.30:5055",
+      "dst": "192.168.143.243:61356",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Gaming port 5055/61356",
+      "hex_preview": "000000015b75951501cbfd1b01ff0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 238,
+      "payload_size": 196,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877c201fd39400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:62699",
+      "dst": "5.45.187.119:4535",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "6ef70001015e36cc5bf27e2501ff0004"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 220,
+      "payload_size": 178,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728301fd7900aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 230,
+      "payload_size": 188,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728401fd7cc0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 229,
+      "payload_size": 187,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877c301fd3d000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "5.45.187.119:4535",
+      "dst": "192.168.143.243:62699",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "High entropy payload",
+      "hex_preview": "000000015b75749c5bf27e2501ff0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 164,
+      "payload_size": 122,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "81c800120881aa4a28580df3520a30d8"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 214,
+      "payload_size": 172,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877c401fd40c00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 219,
+      "payload_size": 177,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728501fd8080aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 213,
+      "payload_size": 171,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728601fd8440aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 214,
+      "payload_size": 172,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877c501fd44800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50367",
+      "dst": "5.45.187.53:5056",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "3f820001000a9acc67bcb5ba05ff0104"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 204,
+      "payload_size": 162,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877c601fd48400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "5.45.187.53:5056",
+      "dst": "192.168.143.243:50367",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Gaming port 5056/50367",
+      "hex_preview": "000000015b7652a867bcb5ba01ff0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 247,
+      "payload_size": 205,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728701fd8800aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 227,
+      "payload_size": 185,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877c701fd4c000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:20",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 226,
+      "payload_size": 184,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728801fd8bc0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 230,
+      "payload_size": 188,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728901fd8f80aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 164,
+      "payload_size": 122,
+      "reason": "High entropy payload",
+      "hex_preview": "81c80012aa4045c53012442c4f3ebf91"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 238,
+      "payload_size": 196,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877c801fd4fc00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 210,
+      "payload_size": 168,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877c901fd53800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 207,
+      "payload_size": 165,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728a01fd9340aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 233,
+      "payload_size": 191,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877ca01fd57400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 194,
+      "payload_size": 152,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728b01fd9700aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 220,
+      "payload_size": 178,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728c01fd9ac0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 209,
+      "payload_size": 167,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877cb01fd5b000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 203,
+      "payload_size": 161,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877cc01fd5ec00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 221,
+      "payload_size": 179,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728d01fd9e80aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 208,
+      "payload_size": 166,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728e01fda240aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 225,
+      "payload_size": 183,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877cd01fd62800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 233,
+      "payload_size": 191,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877ce01fd66400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 230,
+      "payload_size": 188,
+      "reason": "High entropy payload",
+      "hex_preview": "9078728f01fda600aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 240,
+      "payload_size": 198,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729001fda9c0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 235,
+      "payload_size": 193,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877cf01fd6a000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 255,
+      "payload_size": 213,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729101fdad80aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 206,
+      "payload_size": 164,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877d001fd6dc00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 203,
+      "payload_size": 161,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877d101fd71800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "5.45.187.53:5056",
+      "dst": "192.168.143.243:50367",
+      "size": 78,
+      "payload_size": 36,
+      "reason": "Gaming port 5056/50367",
+      "hex_preview": "000000015b76553867bcb5ba06000100"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 246,
+      "payload_size": 204,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729201fdb140aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 68,
+      "payload_size": 26,
+      "reason": "High entropy payload",
+      "hex_preview": "81d00002aa4045c501ac702980000aaa"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50367",
+      "dst": "5.45.187.53:5056",
+      "size": 98,
+      "payload_size": 56,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "3f820002000a9daa67bcb5ba01000004"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 250,
+      "payload_size": 208,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729301fdb500aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 212,
+      "payload_size": 170,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877d201fd75400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "5.45.187.30:5055",
+      "dst": "192.168.143.243:61356",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "Gaming port 5055/61356",
+      "hex_preview": "000000015b7598ed01cbfd1b05ff0100"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:61356",
+      "dst": "5.45.187.30:5055",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "8357000101603ba201cbfd1b01ff0004"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "5.45.187.53:5056",
+      "dst": "192.168.143.243:50367",
+      "size": 646,
+      "payload_size": 604,
+      "reason": "Gaming port 5056/50367",
+      "hex_preview": "0000000e5b76558667bcb5ba01000000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50367",
+      "dst": "5.45.187.53:5056",
+      "size": 314,
+      "payload_size": 272,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "3f82000d000a9df267bcb5ba01000004"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:61356",
+      "dst": "5.45.187.30:5055",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "8357000101603bbe01cbfd1b05ff0104"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 209,
+      "payload_size": 167,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877d301fd79000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 263,
+      "payload_size": 221,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729401fdb8c0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "5.45.187.30:5055",
+      "dst": "192.168.143.243:61356",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Gaming port 5055/61356",
+      "hex_preview": "000000015b75994b01cbfd1b01ff0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 231,
+      "payload_size": 189,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729501fdbc80aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "5.45.187.119:4535",
+      "dst": "192.168.143.243:62699",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "High entropy payload",
+      "hex_preview": "000000015b7578845bf27e2505ff0100"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 214,
+      "payload_size": 172,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877d401fd7cc00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:62699",
+      "dst": "5.45.187.119:4535",
+      "size": 86,
+      "payload_size": 44,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "6ef70002015e3b015bf27e2501ff0004"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 222,
+      "payload_size": 180,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877d501fd80800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 68,
+      "payload_size": 26,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "81d000020881aa4a9bc65e7480000aaa"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 230,
+      "payload_size": 188,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729601fdc040aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "5.45.187.53:5056",
+      "dst": "192.168.143.243:50367",
+      "size": 137,
+      "payload_size": 95,
+      "reason": "Gaming port 5056/50367",
+      "hex_preview": "000000025b76564267bcb5ba07000000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50367",
+      "dst": "5.45.187.53:5056",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "3f820001000a9eaf67bcb5ba01000004"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "5.45.187.119:4535",
+      "dst": "192.168.143.243:62699",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "High entropy payload",
+      "hex_preview": "000000015b7578f15bf27e2501ff0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 221,
+      "payload_size": 179,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877d601fd84400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 231,
+      "payload_size": 189,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729701fdc400aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 223,
+      "payload_size": 181,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729801fdc7c0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 67,
+      "payload_size": 25,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877d701fd88000881aa4adebe0001"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "5.45.187.53:5056",
+      "dst": "192.168.143.243:50367",
+      "size": 133,
+      "payload_size": 91,
+      "reason": "Gaming port 5056/50367",
+      "hex_preview": "000000015b7656af67bcb5ba06000100"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50367",
+      "dst": "5.45.187.53:5056",
+      "size": 74,
+      "payload_size": 32,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "3f820001000a9f1367bcb5ba01000004"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 224,
+      "payload_size": 182,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877d801fd8bc00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:21",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 239,
+      "payload_size": 197,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729901fdcb80aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 241,
+      "payload_size": 199,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877d901fd8f800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 223,
+      "payload_size": 181,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729a01fdcf40aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 214,
+      "payload_size": 172,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877da01fd93400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 254,
+      "payload_size": 212,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729b01fdd300aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 231,
+      "payload_size": 189,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877db01fd97000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 189,
+      "payload_size": 147,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729c01fdd6c0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 267,
+      "payload_size": 225,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729d01fdda80aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 203,
+      "payload_size": 161,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877dc01fd9ac00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 164,
+      "payload_size": 122,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "81c800120881aa4a995d9809c7460565"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 219,
+      "payload_size": 177,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877dd01fd9e800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 241,
+      "payload_size": 199,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729e01fdde40aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 260,
+      "payload_size": 218,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877de01fda2400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 246,
+      "payload_size": 204,
+      "reason": "High entropy payload",
+      "hex_preview": "9078729f01fde200aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 239,
+      "payload_size": 197,
+      "reason": "High entropy payload",
+      "hex_preview": "907872a001fde5c0aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 236,
+      "payload_size": 194,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877df01fda6000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 230,
+      "payload_size": 188,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877e001fda9c00881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 236,
+      "payload_size": 194,
+      "reason": "High entropy payload",
+      "hex_preview": "907872a101fde980aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 164,
+      "payload_size": 122,
+      "reason": "High entropy payload",
+      "hex_preview": "81c80012aa4045c59cc9d425a9dbf6de"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 253,
+      "payload_size": 211,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877e101fdad800881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 230,
+      "payload_size": 188,
+      "reason": "High entropy payload",
+      "hex_preview": "907872a201fded40aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 248,
+      "payload_size": 206,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877e201fdb1400881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 234,
+      "payload_size": 192,
+      "reason": "High entropy payload",
+      "hex_preview": "907872a301fdf100aa4045c5debe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "192.168.143.243:50280",
+      "dst": "157.240.13.51:3478",
+      "size": 226,
+      "payload_size": 184,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "907877e301fdb5000881aa4adebe0000"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "192.168.143.243:50367",
+      "dst": "5.45.187.53:5056",
+      "size": 66,
+      "payload_size": 24,
+      "reason": "Private\u2192Public gaming-sized",
+      "hex_preview": "3f820001000aa1d467bcb5ba05ff0104"
+    },
+    {
+      "timestamp": "21:53:22",
+      "src": "157.240.13.51:3478",
+      "dst": "192.168.143.243:50280",
+      "size": 193,
+      "payload_size": 151,
+      "reason": "High entropy payload",
+      "hex_preview": "907872a401fdf4c0aa4045c5debe0000"
+    }
+  ],
+  "top_ports": {
+    "50280": 132,
+    "3478": 132,
+    "5056": 25,
+    "50367": 25,
+    "5055": 13,
+    "61356": 13,
+    "62699": 11,
+    "4535": 11
+  },
+  "top_ips": {
+    "192.168.143.243": 181,
+    "157.240.13.51": 132,
+    "5.45.187.53": 25,
+    "5.45.187.30": 13,
+    "5.45.187.119": 11
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "scanner_version": "3.2",
+  "deduplication_enabled": true,
+  "ao_data_integrated": true,
+  "timestamp": 1748713375.2647054,
+  "session_duration": 26.48195481300354,
+  "dedup_stats": {
+    "unique_entities": 0,
+    "total_detections": 0,
+    "duplicate_rate": 0
+  },
+  "stats": {
+    "session_start": 1748713348.7827516,
+    "packets_analyzed": 1706,
+    "entities_detected": 0,
+    "unique_entities": 0,
+    "duplicates_filtered": 0,
+    "data_enhanced_detections": 0,
+    "unique_mobs": [],
+    "unique_chests": [],
+    "unique_items": [],
+    "detection_rate": 0
+  },
+  "dungeon_state": {
+    "in_dungeon": false,
+    "dungeon_type": "Unknown",
+    "floor": 0,
+    "entities": {},
+    "player_pos": {
+      "x": 90.64,
+      "y": 0.08,
+      "z": 0.0
+    },
+    "last_update": 1748713374.9727194
+  },
+  "unique_entities": [],
+  "live_entities": [],
+  "detection_history": [],
+  "interface_used": "\\Device\\NPF_{6B3C185F-8A6A-48FA-89E8-F4E0E10196E0}",
+  "servers_monitored": [
+    "35.174.127.31",
+    "13.35.238.120",
+    "5.45.187.30"
+  ]
+}

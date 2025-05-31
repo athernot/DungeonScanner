@@ -1,0 +1,340 @@
+{
+  "scanner_version": "3.2",
+  "deduplication_enabled": true,
+  "ao_data_integrated": true,
+  "timestamp": 1748713710.5766897,
+  "session_duration": 230.3154058456421,
+  "dedup_stats": {
+    "unique_entities": 5,
+    "total_detections": 5,
+    "duplicate_rate": 0.0
+  },
+  "stats": {
+    "session_start": 1748713480.261284,
+    "packets_analyzed": 15405,
+    "entities_detected": 5,
+    "unique_entities": 5,
+    "duplicates_filtered": 0,
+    "data_enhanced_detections": 5,
+    "unique_mobs": [],
+    "unique_chests": [
+      "_CHEST_STANDARD",
+      "SOLO_CHEST_STANDARD",
+      "CHEST_STANDARD"
+    ],
+    "unique_items": [],
+    "detection_rate": 1.8930052785248481
+  },
+  "dungeon_state": {
+    "in_dungeon": false,
+    "dungeon_type": "Unknown",
+    "floor": 0,
+    "entities": {},
+    "player_pos": {
+      "x": 8.3,
+      "y": 1.07,
+      "z": 0.0
+    },
+    "last_update": 1748713709.9411542
+  },
+  "unique_entities": [
+    {
+      "detected_name": "MOB_MORGANA_SOLDIER_VETERAN",
+      "display_name": "Mob Morgana Soldier Veteran",
+      "type": "bosses",
+      "detected_at": 1748713629.7274141,
+      "timestamp": "00:47:09.727",
+      "enhanced_info": {
+        "display_name": "Mob Morgana Soldier Veteran",
+        "unique_name": "MOB_MORGANA_SOLDIER_VETERAN",
+        "type": "\ud83d\udc51 VETERAN BOSS",
+        "threat_level": "Very High",
+        "health": 0,
+        "damage": 0,
+        "tier": 6,
+        "faction": "Unknown"
+      },
+      "unique_hash": "4e77c4a6531bdaf9"
+    },
+    {
+      "detected_name": "CHEST_STANDARD",
+      "display_name": "Chest Standard",
+      "type": "chests",
+      "detected_at": 1748713637.9916177,
+      "timestamp": "00:47:17.991",
+      "enhanced_info": {
+        "display_name": "Chest Standard",
+        "unique_name": "CHEST_STANDARD",
+        "type": "\ud83d\udce6 STANDARD CHEST",
+        "threat_level": "Unknown",
+        "health": 0,
+        "damage": 0,
+        "tier": 0,
+        "faction": "Unknown"
+      },
+      "unique_hash": "081cd188d1de2dde"
+    },
+    {
+      "detected_name": "_CHEST_STANDARD",
+      "display_name": " Chest Standard",
+      "type": "chests",
+      "detected_at": 1748713637.991735,
+      "timestamp": "00:47:17.991",
+      "enhanced_info": {
+        "display_name": " Chest Standard",
+        "unique_name": "_CHEST_STANDARD",
+        "type": "\ud83d\udce6 STANDARD CHEST",
+        "threat_level": "Unknown",
+        "health": 0,
+        "damage": 0,
+        "tier": 0,
+        "faction": "Unknown"
+      },
+      "unique_hash": "26321a282b77887e"
+    },
+    {
+      "detected_name": "SOLO_CHEST_STANDARD",
+      "display_name": "Solo Chest Standard",
+      "type": "chests",
+      "detected_at": 1748713637.9918153,
+      "timestamp": "00:47:17.991",
+      "enhanced_info": {
+        "display_name": "Solo Chest Standard",
+        "unique_name": "SOLO_CHEST_STANDARD",
+        "type": "\ud83d\udce6 STANDARD CHEST",
+        "threat_level": "Unknown",
+        "health": 0,
+        "damage": 0,
+        "tier": 0,
+        "faction": "Unknown"
+      },
+      "unique_hash": "aa207d34e459207d"
+    },
+    {
+      "detected_name": "SHRINE_COMBAT_BUFF",
+      "display_name": "Shrine Combat Buff",
+      "type": "shrines",
+      "detected_at": 1748713638.7393732,
+      "timestamp": "00:47:18.739",
+      "enhanced_info": {
+        "display_name": "Shrine Combat Buff",
+        "unique_name": "SHRINE_COMBAT_BUFF",
+        "type": "\u2b50 SHRINE",
+        "threat_level": "Unknown",
+        "health": 0,
+        "damage": 0,
+        "tier": 0,
+        "faction": "Unknown"
+      },
+      "position": {
+        "x": 223.27,
+        "y": 12.14,
+        "z": 0.0
+      },
+      "distance_from_player": 246.2,
+      "unique_hash": "c531fb38a57f7686"
+    }
+  ],
+  "live_entities": [
+    {
+      "detected_name": "MOB_MORGANA_SOLDIER_VETERAN",
+      "display_name": "Mob Morgana Soldier Veteran",
+      "type": "bosses",
+      "detected_at": 1748713629.7274141,
+      "timestamp": "00:47:09.727",
+      "enhanced_info": {
+        "display_name": "Mob Morgana Soldier Veteran",
+        "unique_name": "MOB_MORGANA_SOLDIER_VETERAN",
+        "type": "\ud83d\udc51 VETERAN BOSS",
+        "threat_level": "Very High",
+        "health": 0,
+        "damage": 0,
+        "tier": 6,
+        "faction": "Unknown"
+      },
+      "unique_hash": "4e77c4a6531bdaf9"
+    },
+    {
+      "detected_name": "CHEST_STANDARD",
+      "display_name": "Chest Standard",
+      "type": "chests",
+      "detected_at": 1748713637.9916177,
+      "timestamp": "00:47:17.991",
+      "enhanced_info": {
+        "display_name": "Chest Standard",
+        "unique_name": "CHEST_STANDARD",
+        "type": "\ud83d\udce6 STANDARD CHEST",
+        "threat_level": "Unknown",
+        "health": 0,
+        "damage": 0,
+        "tier": 0,
+        "faction": "Unknown"
+      },
+      "unique_hash": "081cd188d1de2dde"
+    },
+    {
+      "detected_name": "_CHEST_STANDARD",
+      "display_name": " Chest Standard",
+      "type": "chests",
+      "detected_at": 1748713637.991735,
+      "timestamp": "00:47:17.991",
+      "enhanced_info": {
+        "display_name": " Chest Standard",
+        "unique_name": "_CHEST_STANDARD",
+        "type": "\ud83d\udce6 STANDARD CHEST",
+        "threat_level": "Unknown",
+        "health": 0,
+        "damage": 0,
+        "tier": 0,
+        "faction": "Unknown"
+      },
+      "unique_hash": "26321a282b77887e"
+    },
+    {
+      "detected_name": "SOLO_CHEST_STANDARD",
+      "display_name": "Solo Chest Standard",
+      "type": "chests",
+      "detected_at": 1748713637.9918153,
+      "timestamp": "00:47:17.991",
+      "enhanced_info": {
+        "display_name": "Solo Chest Standard",
+        "unique_name": "SOLO_CHEST_STANDARD",
+        "type": "\ud83d\udce6 STANDARD CHEST",
+        "threat_level": "Unknown",
+        "health": 0,
+        "damage": 0,
+        "tier": 0,
+        "faction": "Unknown"
+      },
+      "unique_hash": "aa207d34e459207d"
+    },
+    {
+      "detected_name": "SHRINE_COMBAT_BUFF",
+      "display_name": "Shrine Combat Buff",
+      "type": "shrines",
+      "detected_at": 1748713638.7393732,
+      "timestamp": "00:47:18.739",
+      "enhanced_info": {
+        "display_name": "Shrine Combat Buff",
+        "unique_name": "SHRINE_COMBAT_BUFF",
+        "type": "\u2b50 SHRINE",
+        "threat_level": "Unknown",
+        "health": 0,
+        "damage": 0,
+        "tier": 0,
+        "faction": "Unknown"
+      },
+      "position": {
+        "x": 223.27,
+        "y": 12.14,
+        "z": 0.0
+      },
+      "distance_from_player": 246.2,
+      "unique_hash": "c531fb38a57f7686"
+    }
+  ],
+  "detection_history": [
+    {
+      "detected_name": "MOB_MORGANA_SOLDIER_VETERAN",
+      "display_name": "Mob Morgana Soldier Veteran",
+      "type": "bosses",
+      "detected_at": 1748713629.7274141,
+      "timestamp": "00:47:09.727",
+      "enhanced_info": {
+        "display_name": "Mob Morgana Soldier Veteran",
+        "unique_name": "MOB_MORGANA_SOLDIER_VETERAN",
+        "type": "\ud83d\udc51 VETERAN BOSS",
+        "threat_level": "Very High",
+        "health": 0,
+        "damage": 0,
+        "tier": 6,
+        "faction": "Unknown"
+      },
+      "unique_hash": "4e77c4a6531bdaf9"
+    },
+    {
+      "detected_name": "CHEST_STANDARD",
+      "display_name": "Chest Standard",
+      "type": "chests",
+      "detected_at": 1748713637.9916177,
+      "timestamp": "00:47:17.991",
+      "enhanced_info": {
+        "display_name": "Chest Standard",
+        "unique_name": "CHEST_STANDARD",
+        "type": "\ud83d\udce6 STANDARD CHEST",
+        "threat_level": "Unknown",
+        "health": 0,
+        "damage": 0,
+        "tier": 0,
+        "faction": "Unknown"
+      },
+      "unique_hash": "081cd188d1de2dde"
+    },
+    {
+      "detected_name": "_CHEST_STANDARD",
+      "display_name": " Chest Standard",
+      "type": "chests",
+      "detected_at": 1748713637.991735,
+      "timestamp": "00:47:17.991",
+      "enhanced_info": {
+        "display_name": " Chest Standard",
+        "unique_name": "_CHEST_STANDARD",
+        "type": "\ud83d\udce6 STANDARD CHEST",
+        "threat_level": "Unknown",
+        "health": 0,
+        "damage": 0,
+        "tier": 0,
+        "faction": "Unknown"
+      },
+      "unique_hash": "26321a282b77887e"
+    },
+    {
+      "detected_name": "SOLO_CHEST_STANDARD",
+      "display_name": "Solo Chest Standard",
+      "type": "chests",
+      "detected_at": 1748713637.9918153,
+      "timestamp": "00:47:17.991",
+      "enhanced_info": {
+        "display_name": "Solo Chest Standard",
+        "unique_name": "SOLO_CHEST_STANDARD",
+        "type": "\ud83d\udce6 STANDARD CHEST",
+        "threat_level": "Unknown",
+        "health": 0,
+        "damage": 0,
+        "tier": 0,
+        "faction": "Unknown"
+      },
+      "unique_hash": "aa207d34e459207d"
+    },
+    {
+      "detected_name": "SHRINE_COMBAT_BUFF",
+      "display_name": "Shrine Combat Buff",
+      "type": "shrines",
+      "detected_at": 1748713638.7393732,
+      "timestamp": "00:47:18.739",
+      "enhanced_info": {
+        "display_name": "Shrine Combat Buff",
+        "unique_name": "SHRINE_COMBAT_BUFF",
+        "type": "\u2b50 SHRINE",
+        "threat_level": "Unknown",
+        "health": 0,
+        "damage": 0,
+        "tier": 0,
+        "faction": "Unknown"
+      },
+      "position": {
+        "x": 223.27,
+        "y": 12.14,
+        "z": 0.0
+      },
+      "distance_from_player": 246.2,
+      "unique_hash": "c531fb38a57f7686"
+    }
+  ],
+  "interface_used": "\\Device\\NPF_{6B3C185F-8A6A-48FA-89E8-F4E0E10196E0}",
+  "servers_monitored": [
+    "35.174.127.31",
+    "5.45.187.30",
+    "13.35.238.120"
+  ]
+}

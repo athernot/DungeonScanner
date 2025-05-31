@@ -1,0 +1,83 @@
+{
+  "timestamp": 1748705328.098969,
+  "session_duration": 99.24398994445801,
+  "stats": {
+    "packets_analyzed": 6750,
+    "mobs_detected": 1,
+    "chests_detected": 1,
+    "items_detected": 0,
+    "session_start": 1748705228.8549798
+  },
+  "current_dungeon": {
+    "in_dungeon": true,
+    "dungeon_id": null,
+    "floor": 0,
+    "mobs": {
+      "mob_1748705305.4755392": {
+        "name": "KEEPER_SOLO_CHEST_RARE",
+        "type": "MOB",
+        "detected_at": 1748705305.475538,
+        "position": {
+          "x": 3249.375,
+          "y": 3364.08251953125,
+          "z": 3365.9580078125
+        }
+      }
+    },
+    "chests": {
+      "chest_1748705305.4756885": {
+        "name": "CHEST_RARE",
+        "type": "CHEST",
+        "detected_at": 1748705305.4756873,
+        "position": {
+          "x": 3249.375,
+          "y": 3364.08251953125,
+          "z": 3365.9580078125
+        },
+        "rarity": "\ud83d\udd35 RARE"
+      }
+    },
+    "player_position": {
+      "x": -6.875490188598633,
+      "y": -3156.04150390625,
+      "z": -0.5484875440597534
+    }
+  },
+  "recent_detections": [
+    {
+      "type": "MOB",
+      "timestamp": "22:28:25",
+      "info": {
+        "name": "KEEPER_SOLO_CHEST_RARE",
+        "type": "MOB",
+        "detected_at": 1748705305.475538,
+        "position": {
+          "x": 3249.375,
+          "y": 3364.08251953125,
+          "z": 3365.9580078125
+        }
+      }
+    },
+    {
+      "type": "CHEST",
+      "timestamp": "22:28:25",
+      "info": {
+        "name": "CHEST_RARE",
+        "type": "CHEST",
+        "detected_at": 1748705305.4756873,
+        "position": {
+          "x": 3249.375,
+          "y": 3364.08251953125,
+          "z": 3365.9580078125
+        },
+        "rarity": "\ud83d\udd35 RARE"
+      }
+    }
+  ],
+  "interface_used": "\\Device\\NPF_{6B3C185F-8A6A-48FA-89E8-F4E0E10196E0}",
+  "servers_monitored": [
+    "13.35.238.120",
+    "35.174.127.31",
+    "5.45.187.30"
+  ]
+}

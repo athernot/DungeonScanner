@@ -1,0 +1,32 @@
+{
+  "SOLO_": {
+    "display_name": "Solo Dungeon",
+    "type": "Solo",
+    "difficulty": "Medium",
+    "max_players": 1
+  },
+  "GROUP_": {
+    "display_name": "Group Dungeon",
+    "type": "Group",
+    "difficulty": "High",
+    "max_players": 5
+  },
+  "AVALONIAN_": {
+    "display_name": "Avalonian Dungeon",
+    "type": "Avalonian",
+    "difficulty": "Very High",
+    "max_players": 5
+  },
+  "CORRUPTED_": {
+    "display_name": "Corrupted Dungeon",
+    "type": "Corrupted",
+    "difficulty": "High",
+    "max_players": 1
+  },
+  "HELLGATE_": {
+    "display_name": "Hellgate",
+    "type": "PvP",
+    "difficulty": "Extreme",
+    "max_players": 5
+  }
+}

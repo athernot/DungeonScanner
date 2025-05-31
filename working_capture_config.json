@@ -1,0 +1,38 @@
+{
+  "interface_index": 4,
+  "interface_name": "\\Device\\NPF_{6B3C185F-8A6A-48FA-89E8-F4E0E10196E0}",
+  "client_ip": "192.168.143.243",
+  "detected_servers": [
+    "13.35.238.120",
+    "35.174.127.31",
+    "5.45.187.30",
+    "157.240.13.51",
+    "5.45.187.119",
+    "162.159.136.234",
+    "13.89.178.26",
+    "5.45.187.53"
+  ],
+  "capture_confirmed": true,
+  "recommended_filter": "udp and host 192.168.143.243",
+  "test_results": {
+    "interface": "\\Device\\NPF_{6B3C185F-8A6A-48FA-89E8-F4E0E10196E0}",
+    "tests": {
+      "basic_capture": 167,
+      "udp_capture": 173,
+      "client_traffic": 521,
+      "detected_servers": [
+        "13.35.238.120",
+        "35.174.127.31",
+        "5.45.187.30",
+        "157.240.13.51",
+        "5.45.187.119",
+        "162.159.136.234",
+        "13.89.178.26",
+        "5.45.187.53"
+      ]
+    },
+    "working": true,
+    "packets_captured": 861,
+    "errors": []
+  }
+}
